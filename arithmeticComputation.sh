@@ -17,7 +17,7 @@ for (( a = 0; a<5; a++ ))
 do
      for(( b = 0; b<5-a-1; b++))
      do
-        if [[ ${arr[b]} -lt ${arr[$((b+1))]} ]]
+        if [[ ${arr[b]} -gt ${arr[$((b+1))]} ]]
         then
             temp=${arr[b]}
             arr[$b]=${arr[$((b+1))]}
@@ -25,7 +25,7 @@ do
         fi
     done
 done
-echo "Array in descending order:"
+echo "Array in ascending order:"
 echo  ${arr[@]}
 
 
