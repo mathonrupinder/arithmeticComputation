@@ -4,5 +4,7 @@ read -p "Enter second input:" b
 read -p "Enter third input:" c
 compute1=$(( a+b*c ))
 echo "computation1=$compute1"
+compute2=$(( a*b+c ))
+echo "computation2=$compute2"
 
 
