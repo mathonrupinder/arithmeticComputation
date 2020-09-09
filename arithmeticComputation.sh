@@ -12,8 +12,21 @@ for(( i=1; i<=4; i++ ))
 do
    echo "computation[$i]:${compute[$i]}"
    arr[i]=${compute[$i]}
-   
 done
+for (( a = 0; a<5; a++ ))
+do
+     for(( b = 0; b<5-a-1; b++))
+     do
+        if [[ ${arr[b]} -lt ${arr[$((b+1))]} ]]
+        then
+            temp=${arr[b]}
+            arr[$b]=${arr[$((b+1))]}
+            arr[$((b+1))]=$temp
+        fi
+    done
+done
+echo "Array in descending order:"
+echo  ${arr[@]}
 
 
 
