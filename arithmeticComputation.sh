@@ -8,6 +8,8 @@ compute2=$(( a*b+c ))
 echo "computation2=$compute2"
 compute3=$(( c+a/b ))
 echo "computation3=$compute3"
+compute4=$(( a%b+c ))
+echo "computation4=$compute4"
 
 
 
